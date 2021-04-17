@@ -8,8 +8,8 @@ const productSchema = new Schema({
         required: true
     },
     author: {
-        type: Schema.Types.ObjectId,
-        ref: 'author'
+        type: String,
+        required: true
     },
     summary: {
         type: String,
@@ -21,7 +21,8 @@ const productSchema = new Schema({
     },
     catalog: {
         type: Schema.Types.ObjectId,
-        ref: 'catalog'
+        ref: 'catalog',
+        required: true
     }
 })
 

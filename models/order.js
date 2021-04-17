@@ -3,20 +3,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const orderSchema = new Schema({
-    product: [{
+    cart: [{
         type: Schema.Types.ObjectId,
-        ref: 'product',
+        ref: 'cart',
         required: true
     }],
-    number: {
-        type: Number,
-        required: true,
-    },
-    address: [{
+    address: {
         type: Schema.Types.ObjectId,
         ref: 'address',
         required: true
-    }],
+    },
     status: {
         type: String,
         required: true,
